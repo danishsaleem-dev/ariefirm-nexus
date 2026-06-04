@@ -1,29 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/SiteLayout";
+import { Hero } from "@/components/site/Hero";
+import { ServicesSection } from "@/components/site/ServicesSection";
+import { PopularTopics } from "@/components/site/PopularTopics";
+import { WhyChoose } from "@/components/site/WhyChoose";
+import { Testimonials } from "@/components/site/Testimonials";
+import { CTASection } from "@/components/site/CTASection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Ariefirm — Legal Consultancy, Development & Investment" },
+      {
+        name: "description",
+        content:
+          "Ariefirm unites legal consultancy, building developments, government projects, investment, trading and disputes management under one trusted firm.",
+      },
+      { property: "og:title", content: "Ariefirm — Legal Consultancy, Development & Investment" },
+      {
+        property: "og:description",
+        content:
+          "One trusted firm for legal advisory, developments, government projects, investment and trading.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <Hero />
+      <ServicesSection limit={6} />
+      <PopularTopics />
+      <WhyChoose />
+      <Testimonials />
+      <CTASection />
+    </SiteLayout>
   );
 }
