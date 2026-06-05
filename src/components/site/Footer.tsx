@@ -37,9 +37,9 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
-            An integrated consultancy uniting legal advisory, building developments,
-            government projects, investment and trading — building trust across every
-            project we touch.
+            A diversified business development, consulting and operations firm —
+            planning, developing and managing commercial, retail, food, lifestyle and
+            entertainment destinations across Pakistan.
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[Linkedin, Twitter, Facebook].map((Icon, i) => (
