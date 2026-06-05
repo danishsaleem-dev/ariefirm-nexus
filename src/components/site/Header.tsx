@@ -34,7 +34,7 @@ export function Header() {
               <Clock className="h-3.5 w-3.5 text-gold" /> Mon–Fri · 9:00–18:00
             </span>
             <span className="text-gold font-medium tracking-wide uppercase">
-              Trusted across 4 continents
+              Trusted across Pakistan
             </span>
           </div>
         </div>
@@ -58,7 +58,7 @@ export function Header() {
                 Arie<span className="text-gold">firm</span>
               </span>
               <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                Legal · Development · Investment
+                Develop · Operate · Manage
               </span>
             </span>
           </Link>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/site/Hero";
 import { ServicesSection } from "@/components/site/ServicesSection";
+import { Sectors } from "@/components/site/Sectors";
 import { PopularTopics } from "@/components/site/PopularTopics";
 import { WhyChoose } from "@/components/site/WhyChoose";
 import { Testimonials } from "@/components/site/Testimonials";
@@ -10,17 +11,17 @@ import { CTASection } from "@/components/site/CTASection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ariefirm — Legal Consultancy, Development & Investment" },
+      { title: "ArieFirm — Commercial Development, Malls & Lifestyle Projects" },
       {
         name: "description",
         content:
-          "Ariefirm unites legal consultancy, building developments, government projects, investment, trading and disputes management under one trusted firm.",
+          "ArieFirm designs, builds and operates commercial destinations across Pakistan — shopping malls, food courts, retail, lifestyle and entertainment projects.",
       },
-      { property: "og:title", content: "Ariefirm — Legal Consultancy, Development & Investment" },
+      { property: "og:title", content: "ArieFirm — Commercial Development, Malls & Lifestyle Projects" },
       {
         property: "og:description",
         content:
-          "One trusted firm for legal advisory, developments, government projects, investment and trading.",
+          "Diversified development, consulting and operations firm creating and managing commercial destinations across Pakistan.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -34,6 +35,7 @@ function Index() {
     <SiteLayout>
       <Hero />
       <ServicesSection limit={6} />
+      <Sectors />
       <PopularTopics />
       <WhyChoose />
       <Testimonials />

@@ -1,13 +1,20 @@
 import {
-  Scale,
   Building2,
-  Landmark,
-  HardHat,
-  Globe2,
-  Home,
-  Gavel,
+  Store,
+  UtensilsCrossed,
+  ShoppingBag,
+  Ticket,
+  Network,
   TrendingUp,
-  ShoppingCart,
+  Scale,
+  LineChart,
+  Wrench,
+  Landmark,
+  Building,
+  Megaphone,
+  ClipboardCheck,
+  Hotel,
+  Handshake,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,85 +29,148 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "legal-consultancy",
-    icon: Scale,
-    title: "Legal Consultancy",
-    short: "Expert legal advice across corporate, commercial and regulatory matters.",
-    description:
-      "End-to-end legal advisory covering contracts, compliance, corporate structuring and risk — delivered in plain language by a seasoned team.",
-    points: ["Contract drafting & review", "Corporate & commercial law", "Regulatory compliance", "Legal due diligence"],
-  },
-  {
-    slug: "building-developments",
+    slug: "commercial-project-development",
     icon: Building2,
-    title: "Building Developments",
-    short: "From feasibility to handover — full-cycle real estate development.",
+    title: "Commercial Project Development",
+    short: "Planning, developing and establishing modern commercial projects from the ground up.",
     description:
-      "We lead residential, commercial and mixed-use developments through planning, design, approvals and delivery.",
-    points: ["Feasibility studies", "Planning & approvals", "Design coordination", "Delivery management"],
+      "We conceive, design and build modern commercial destinations — taking projects from feasibility and architecture through engineering, construction and operational launch.",
+    points: ["Concept & feasibility", "Architecture & engineering", "Construction delivery", "Operational setup"],
   },
   {
-    slug: "government-projects",
-    icon: Landmark,
-    title: "Government Projects",
-    short: "Trusted partner for public-sector tenders and infrastructure.",
+    slug: "shopping-mall-operations",
+    icon: Store,
+    title: "Shopping Mall Operations & Management",
+    short: "Full-cycle development and day-to-day management of shopping malls.",
     description:
-      "Bid preparation, public-private partnerships and compliant execution of large-scale government contracts.",
-    points: ["Tender & bid support", "PPP advisory", "Public procurement", "Compliance & reporting"],
+      "End-to-end mall management covering tenant mix, footfall strategy, operations, security and experience — keeping every floor performing.",
+    points: ["Tenant mix planning", "Operations management", "Footfall strategy", "Guest experience"],
   },
   {
-    slug: "project-handling",
-    icon: HardHat,
-    title: "Project Handling",
-    short: "Construction and project management from groundbreak to handover.",
+    slug: "food-court-development",
+    icon: UtensilsCrossed,
+    title: "Food Court Development & Operations",
+    short: "Designing and operating high-performing food courts and dining destinations.",
     description:
-      "Hands-on construction project management — cost control, scheduling, quality and contractor coordination.",
-    points: ["Construction management", "Cost & schedule control", "Quality assurance", "Contractor coordination"],
+      "We build and run food courts that draw crowds — from layout and kitchen infrastructure to brand curation and ongoing operations.",
+    points: ["Food court design", "Kitchen infrastructure", "Brand curation", "Daily operations"],
   },
   {
-    slug: "global-village",
-    icon: Globe2,
-    title: "Global Village",
-    short: "Master-planned communities designed for modern living.",
+    slug: "retail-lifestyle-brands",
+    icon: ShoppingBag,
+    title: "Retail & Lifestyle Brand Placement",
+    short: "Connecting national and international lifestyle brands with the right spaces.",
     description:
-      "Integrated community planning blending residential, retail and leisure into sustainable, connected places.",
-    points: ["Master planning", "Community design", "Sustainability", "Lifestyle amenities"],
+      "We curate and place leading retail and lifestyle brands, structuring the partnerships that make commercial destinations thrive.",
+    points: ["Brand sourcing", "Lifestyle curation", "Space planning", "Partnership structuring"],
   },
   {
-    slug: "settlements",
-    icon: Home,
-    title: "Settlements",
-    short: "Housing schemes and resettlement planning at scale.",
+    slug: "entertainment-recreation",
+    icon: Ticket,
+    title: "Entertainment & Recreation Venues",
+    short: "Developing and managing entertainment, events and recreational venues.",
     description:
-      "Planning, financing and delivery of housing settlements with full legal and infrastructure support.",
-    points: ["Housing schemes", "Resettlement planning", "Land allocation", "Infrastructure"],
+      "From recreational areas to events and entertainment zones, we develop and operate venues that create memorable experiences.",
+    points: ["Venue development", "Event programming", "Recreation zones", "Experience design"],
   },
   {
-    slug: "disputes-management",
-    icon: Gavel,
-    title: "Disputes Management",
-    short: "Strategic resolution of commercial and construction disputes.",
+    slug: "franchise-development",
+    icon: Network,
+    title: "Franchise Development & Management",
+    short: "Building and managing franchise networks for sustainable growth.",
     description:
-      "Mediation, arbitration and litigation strategy to protect your interests and resolve conflicts efficiently.",
-    points: ["Mediation & arbitration", "Litigation strategy", "Contract disputes", "Negotiation"],
+      "We develop franchise models and manage networks — handling rollout, standards, support and performance across locations.",
+    points: ["Franchise strategy", "Network rollout", "Standards & support", "Performance management"],
   },
   {
-    slug: "investment-financing",
+    slug: "business-development",
     icon: TrendingUp,
-    title: "Investment & Financing",
-    short: "Structuring capital, funding and investment vehicles.",
+    title: "Business Development & Growth",
+    short: "Strategy, expansion consulting and growth planning for commercial ventures.",
     description:
-      "We connect projects with capital — structuring finance, securing funding and advising investors.",
-    points: ["Project finance", "Investment structuring", "Fund advisory", "Risk assessment"],
+      "Corporate advisory and growth planning that helps businesses expand confidently — backed by strategy, market insight and execution.",
+    points: ["Expansion consulting", "Corporate advisory", "Growth planning", "Market positioning"],
   },
   {
-    slug: "trading",
-    icon: ShoppingCart,
-    title: "Trading",
-    short: "Cross-border trade, sourcing and supply solutions.",
+    slug: "investment-feasibility",
+    icon: LineChart,
+    title: "Investment Structuring & Feasibility",
+    short: "Structuring investment and validating projects with rigorous feasibility analysis.",
     description:
-      "International trading and procurement — sourcing, logistics and trade documentation handled end-to-end.",
-    points: ["Import & export", "Sourcing & procurement", "Trade documentation", "Logistics"],
+      "We structure investment and run feasibility studies so capital is deployed into projects with clear, evidenced returns.",
+    points: ["Feasibility analysis", "Investment structuring", "Financial modelling", "Risk assessment"],
+  },
+  {
+    slug: "real-estate-commercialization",
+    icon: Building,
+    title: "Real Estate Development & Commercialization",
+    short: "Unlocking and commercializing real estate for high-value commercial use.",
+    description:
+      "We develop and commercialize real estate — converting land and assets into operating commercial destinations.",
+    points: ["Site development", "Commercialization", "Asset positioning", "Value creation"],
+  },
+  {
+    slug: "leasing-tenant-management",
+    icon: Handshake,
+    title: "Commercial Leasing & Tenant Management",
+    short: "Leasing strategy and tenant relations that keep occupancy and value high.",
+    description:
+      "From leasing strategy to ongoing tenant management, we maximise occupancy, retention and long-term asset value.",
+    points: ["Leasing strategy", "Tenant relations", "Occupancy optimisation", "Lease administration"],
+  },
+  {
+    slug: "marketing-brand-positioning",
+    icon: Megaphone,
+    title: "Marketing & Brand Positioning",
+    short: "Positioning destinations and brands to capture attention and footfall.",
+    description:
+      "Marketing and brand strategy that builds awareness, drives footfall and positions destinations as market leaders.",
+    points: ["Brand positioning", "Campaign strategy", "Footfall marketing", "Digital presence"],
+  },
+  {
+    slug: "facility-management",
+    icon: Wrench,
+    title: "Facility Management & Operations",
+    short: "Keeping commercial facilities running safely, cleanly and efficiently.",
+    description:
+      "Comprehensive facility management — maintenance, utilities, security and upgrades that protect the asset and the experience.",
+    points: ["Maintenance & upkeep", "Utilities & MEP", "Security operations", "Upgrades & refits"],
+  },
+  {
+    slug: "project-management-execution",
+    icon: ClipboardCheck,
+    title: "Project Management & Execution",
+    short: "Disciplined delivery of complex projects on time and on budget.",
+    description:
+      "We manage and execute projects end to end — controlling cost, schedule, quality and contractors from start to finish.",
+    points: ["Cost & schedule control", "Quality assurance", "Contractor coordination", "Delivery management"],
+  },
+  {
+    slug: "corporate-legal-compliance",
+    icon: Scale,
+    title: "Corporate Advisory & Compliance",
+    short: "Legal, taxation and regulatory support across every business activity.",
+    description:
+      "Corporate advisory plus legal, taxation and regulatory compliance support that keeps operations fully aligned with the law.",
+    points: ["Legal advisory", "Regulatory compliance", "Taxation support", "Corporate structuring"],
+  },
+  {
+    slug: "government-liaison",
+    icon: Landmark,
+    title: "Government Liaison & Coordination",
+    short: "Coordinating approvals and regulatory matters with public authorities.",
+    description:
+      "We manage government liaison and regulatory coordination — navigating approvals, zoning and authority relations on your behalf.",
+    points: ["Authority coordination", "Approvals & zoning", "Regulatory liaison", "Public-sector facilities"],
+  },
+  {
+    slug: "hospitality-lifestyle",
+    icon: Hotel,
+    title: "Hospitality & Lifestyle Operations",
+    short: "Operating hospitality and lifestyle destinations to the highest standard.",
+    description:
+      "We develop and operate hospitality and lifestyle projects, delivering service quality that builds loyal, returning audiences.",
+    points: ["Hospitality operations", "Service standards", "Lifestyle concepts", "Guest loyalty"],
   },
 ];
 
@@ -112,41 +182,63 @@ export interface TopicGroup {
 
 export const popularTopics: TopicGroup[] = [
   {
-    category: "Legal & Corporate",
-    links: [
-      "Shareholders agreements",
-      "Commercial contracts",
-      "Non-disclosure agreements",
-      "Joint venture agreements",
-      "Corporate compliance",
-      "Regulatory advisory",
-    ],
-    all: "All Legal Topics",
-  },
-  {
     category: "Development & Construction",
     links: [
-      "Building development feasibility",
-      "Construction contracts",
-      "Project handover packages",
-      "Planning & approvals",
-      "Contractor agreements",
-      "Quality & safety compliance",
+      "Commercial project development",
+      "Shopping mall development",
+      "Food court development",
+      "Real estate commercialization",
+      "Architecture & engineering",
+      "Project management & execution",
     ],
     all: "All Development Topics",
   },
   {
-    category: "Investment & Trade",
+    category: "Retail, Lifestyle & Entertainment",
     links: [
-      "Project finance structuring",
-      "Investment agreements",
-      "Settlements & housing finance",
-      "Cross-border trading",
-      "Dispute resolution",
-      "Government tender support",
+      "Retail & lifestyle brand placement",
+      "Franchise development",
+      "Entertainment & recreation venues",
+      "Hospitality & lifestyle operations",
+      "Marketing & brand positioning",
+      "Tenant & leasing management",
     ],
-    all: "All Investment Topics",
+    all: "All Lifestyle Topics",
   },
+  {
+    category: "Advisory, Investment & Compliance",
+    links: [
+      "Investment structuring & feasibility",
+      "Business development & growth",
+      "Corporate & legal advisory",
+      "Regulatory & taxation compliance",
+      "Government liaison & coordination",
+      "Facility management & operations",
+    ],
+    all: "All Advisory Topics",
+  },
+];
+
+export interface Sector {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+}
+
+export const sectors: Sector[] = [
+  { icon: Store, title: "Shopping Malls", text: "Retail destinations developed and managed end to end." },
+  { icon: UtensilsCrossed, title: "Food & Dining", text: "Food courts and dining concepts that draw crowds." },
+  { icon: Ticket, title: "Entertainment", text: "Recreation, events and entertainment venues." },
+  { icon: ShoppingBag, title: "Retail & Lifestyle", text: "National and international lifestyle brands." },
+  { icon: Hotel, title: "Hospitality", text: "Lifestyle and hospitality operations." },
+  { icon: Landmark, title: "Public-Sector", text: "Government and regulated commercial facilities." },
+];
+
+export const stats = [
+  { value: "18+", label: "Integrated service lines" },
+  { value: "Nationwide", label: "Projects across Pakistan" },
+  { value: "Global", label: "National & international brands" },
+  { value: "End-to-End", label: "Design, build & operate" },
 ];
 
 export const navLinks = [

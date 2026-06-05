@@ -37,9 +37,9 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
-            An integrated consultancy uniting legal advisory, building developments,
-            government projects, investment and trading — building trust across every
-            project we touch.
+            A diversified business development, consulting and operations firm —
+            planning, developing and managing commercial, retail, food, lifestyle and
+            entertainment destinations across Pakistan.
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[Linkedin, Twitter, Facebook].map((Icon, i) => (
@@ -100,7 +100,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <span>One Global Plaza, Suite 1200</span>
+              <span>25-K, Gulberg II, Lahore, Pakistan</span>
             </li>
           </ul>
         </div>
@@ -109,7 +109,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} Ariefirm. All rights reserved.</p>
-          <p>Legal Consultancy · Developments · Investment · Trading</p>
+          <p>Development · Operations · Retail · Lifestyle · Entertainment</p>
         </div>
       </div>
     </footer>

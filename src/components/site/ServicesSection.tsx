@@ -16,8 +16,8 @@ export function ServicesSection({ limit }: { limit?: number }) {
             One firm, complete coverage
           </h2>
           <p className="mt-4 text-muted-foreground">
-            From legal counsel to construction delivery and global trade, Ariefirm
-            handles the full lifecycle of your ventures.
+            From commercial development and mall operations to retail, food, entertainment,
+            investment and compliance — ArieFirm handles the full lifecycle of your venture.
           </p>
         </div>
 
