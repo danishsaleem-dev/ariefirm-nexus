@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/site/Hero";
 import { ServicesSection } from "@/components/site/ServicesSection";
+import { Sectors } from "@/components/site/Sectors";
 import { PopularTopics } from "@/components/site/PopularTopics";
 import { WhyChoose } from "@/components/site/WhyChoose";
 import { Testimonials } from "@/components/site/Testimonials";
