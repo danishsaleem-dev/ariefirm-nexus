@@ -9,16 +9,16 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28 lg:px-8">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1 text-xs font-medium text-gold">
-            <ShieldCheck className="h-3.5 w-3.5" /> Trusted advisory since day one
+            <ShieldCheck className="h-3.5 w-3.5" /> Building commercial destinations across Pakistan
           </span>
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.1] sm:text-5xl lg:text-6xl">
-            Legal & development expertise you can{" "}
-            <span className="text-gold">build on</span>
+            We design, build & operate{" "}
+            <span className="text-gold">commercial destinations</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
-            Ariefirm unites legal consultancy, building developments, government
-            projects, investment and trading under one trusted firm — guiding your
-            most important ventures from idea to delivery.
+            ArieFirm is a diversified development, consulting and operations firm —
+            creating and running shopping malls, food courts, retail, lifestyle and
+            entertainment projects with national and international brands across Pakistan.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
