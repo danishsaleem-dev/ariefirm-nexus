@@ -40,11 +40,12 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wide text-gold">About us</p>
           <h1 className="mt-3 max-w-3xl font-serif text-4xl font-semibold sm:text-5xl">
-            One firm, built on trust and delivery
+            We build and run commercial destinations
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80">
-            Ariefirm brings together specialists in law, construction, finance and
-            trade — so your projects are guided by a single, accountable partner.
+            ArieFirm is a diversified business development, consulting, operations and
+            commercial project execution firm — planning, developing, establishing and
+            managing commercial projects across Pakistan.
           </p>
         </div>
       </section>
@@ -54,15 +55,17 @@ function AboutPage() {
           <div>
             <h2 className="font-serif text-3xl font-semibold text-foreground">Who we are</h2>
             <p className="mt-4 text-muted-foreground">
-              From legal consultancy and disputes management to building
-              developments, government projects, settlements, global village
-              master-planning, investment, financing and trading — Ariefirm covers
-              the full spectrum of what complex ventures demand.
+              We provide comprehensive business solutions across commercial project
+              development, shopping mall and food court operations, retail and lifestyle
+              brand placement, franchise development, entertainment venues, hospitality,
+              investment structuring, marketing, facility management and more.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our advantage is integration. Instead of coordinating between separate
-              firms, you get one team that understands the legal, technical and
-              financial dimensions of your project and moves them forward together.
+              ArieFirm works with national and international brands and has extensive
+              experience operating commercial, retail, food, entertainment and
+              public-sector facilities. The company is duly registered and compliant with
+              all applicable legal, taxation, regulatory and governmental requirements for
+              conducting business in Pakistan.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-4 self-center">
