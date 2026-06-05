@@ -3,23 +3,24 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Ariefirm guided our mixed-use development from feasibility to handover. Their legal and project teams worked as one — seamless and dependable.",
-    name: "Daniel R.",
-    role: "Property Developer",
+      "ArieFirm took our commercial plot from concept to a thriving destination — design, construction and operations handled by one accountable team.",
+    name: "Landlord & Developer",
+    role: "Gulberg, Lahore",
   },
   {
     quote:
-      "The investment structuring advice was sharp and clear. They secured financing terms we didn't think were possible.",
-    name: "Sara M.",
-    role: "Managing Director",
+      "Their tenant mix and leasing strategy filled the mall with the right brands and kept footfall strong from day one.",
+    name: "Retail Partner",
+    role: "Lifestyle Brand",
   },
   {
     quote:
-      "On a complex government project, their compliance and dispute management kept everything on track. Highly recommended.",
-    name: "Omar K.",
-    role: "Infrastructure Lead",
+      "From feasibility and investment structuring to government liaison, ArieFirm managed the complexity so we could focus on returns.",
+    name: "Investment Partner",
+    role: "Commercial Project",
   },
 ];
+
 
 export function Testimonials() {
   return (
