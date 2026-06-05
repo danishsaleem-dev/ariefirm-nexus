@@ -1,22 +1,23 @@
-import { Lightbulb, ShieldCheck, Users } from "lucide-react";
+import { Layers, ShieldCheck, Users } from "lucide-react";
 
 const pillars = [
   {
-    icon: Lightbulb,
-    title: "Handle matters with clarity",
-    text: "Plain-language advice and documentation make every decision easy to understand and quick to act on.",
+    icon: Layers,
+    title: "One firm, end to end",
+    text: "We design, build, finance and operate — so a single accountable partner carries your project from concept to daily operations.",
   },
   {
     icon: ShieldCheck,
-    title: "Protect all your interests",
-    text: "We look beyond the minimum — covering the practical risks that protect your project end to end.",
+    title: "Fully compliant & registered",
+    text: "Duly registered and aligned with all legal, taxation, regulatory and governmental requirements for doing business in Pakistan.",
   },
   {
     icon: Users,
-    title: "Tap into our experience",
-    text: "A multidisciplinary team across law, development and finance, ready to guide, review or deliver for you.",
+    title: "Trusted by leading brands",
+    text: "Deep experience managing commercial, retail, food, entertainment and public-sector facilities with national and international brands.",
   },
 ];
+
 
 export function WhyChoose() {
   return (
