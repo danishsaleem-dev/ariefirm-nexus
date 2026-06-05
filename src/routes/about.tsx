@@ -6,14 +6,14 @@ import { Target, Eye, Award } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Ariefirm" },
+      { title: "About — ArieFirm" },
       {
         name: "description",
         content:
-          "Ariefirm is a multidisciplinary firm uniting legal consultancy, development, investment and trading expertise to deliver ventures from idea to completion.",
+          "ArieFirm is a diversified business development, consulting and operations firm developing and managing commercial, retail, food and entertainment destinations across Pakistan.",
       },
-      { property: "og:title", content: "About — Ariefirm" },
-      { property: "og:description", content: "A multidisciplinary firm built on trust and delivery." },
+      { property: "og:title", content: "About — ArieFirm" },
+      { property: "og:description", content: "A diversified development and operations firm building commercial destinations across Pakistan." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
