@@ -58,7 +58,7 @@ export function Header() {
                 Arie<span className="text-gold">firm</span>
               </span>
               <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                Legal · Development · Investment
+                Develop · Operate · Manage
               </span>
             </span>
           </Link>
