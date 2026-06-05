@@ -35,6 +35,7 @@ function Index() {
     <SiteLayout>
       <Hero />
       <ServicesSection limit={6} />
+      <Sectors />
       <PopularTopics />
       <WhyChoose />
       <Testimonials />
