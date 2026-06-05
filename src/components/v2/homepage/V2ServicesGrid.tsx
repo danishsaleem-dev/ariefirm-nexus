@@ -1,112 +1,109 @@
 import { Link } from "@tanstack/react-router";
 import {
-  Building2, Store, UtensilsCrossed, ShoppingBag,
-  Ticket, Network, TrendingUp, LineChart,
-  Building, Handshake, Megaphone, Wrench,
-  ClipboardCheck, Scale, Landmark, Hotel,
-  ArrowRight,
+  Building2, Store, UtensilsCrossed, ShoppingBag, Ticket, Network,
+  TrendingUp, LineChart, Building, Handshake, Megaphone, Wrench,
+  ClipboardCheck, Scale, Landmark, Hotel, ArrowRight,
 } from "lucide-react";
 
+const BLUE = "#1547D6";
+
 const services = [
-  { icon: Building2, title: "Commercial Project Development", tag: "Development", color: "#1549F0" },
-  { icon: Store, title: "Shopping Mall Operations", tag: "Operations", color: "#C9A32A" },
-  { icon: UtensilsCrossed, title: "Food Court Development", tag: "F&B", color: "#1549F0" },
-  { icon: ShoppingBag, title: "Retail & Lifestyle Brands", tag: "Retail", color: "#C9A32A" },
-  { icon: Ticket, title: "Entertainment Venues", tag: "Entertainment", color: "#1549F0" },
-  { icon: Network, title: "Franchise Development", tag: "Growth", color: "#C9A32A" },
-  { icon: TrendingUp, title: "Business Development & Growth", tag: "Strategy", color: "#1549F0" },
-  { icon: LineChart, title: "Investment & Feasibility", tag: "Finance", color: "#C9A32A" },
-  { icon: Building, title: "Real Estate Commercialization", tag: "Property", color: "#1549F0" },
-  { icon: Handshake, title: "Commercial Leasing & Tenants", tag: "Leasing", color: "#C9A32A" },
-  { icon: Megaphone, title: "Marketing & Brand Positioning", tag: "Marketing", color: "#1549F0" },
-  { icon: Wrench, title: "Facility Management", tag: "FM", color: "#C9A32A" },
-  { icon: ClipboardCheck, title: "Project Management", tag: "PMO", color: "#1549F0" },
-  { icon: Scale, title: "Corporate Advisory", tag: "Advisory", color: "#C9A32A" },
-  { icon: Landmark, title: "Government Liaison", tag: "Regulatory", color: "#1549F0" },
-  { icon: Hotel, title: "Hospitality & Lifestyle Ops", tag: "Hospitality", color: "#C9A32A" },
+  { icon: Building2, title: "Commercial Project Development", tag: "Development" },
+  { icon: Store, title: "Shopping Mall Operations", tag: "Operations" },
+  { icon: UtensilsCrossed, title: "Food Court Development", tag: "F&B" },
+  { icon: ShoppingBag, title: "Retail & Lifestyle Brands", tag: "Retail" },
+  { icon: Ticket, title: "Entertainment Venues", tag: "Entertainment" },
+  { icon: Network, title: "Franchise Development", tag: "Growth" },
+  { icon: TrendingUp, title: "Business Development & Growth", tag: "Strategy" },
+  { icon: LineChart, title: "Investment & Feasibility", tag: "Finance" },
+  { icon: Building, title: "Real Estate Commercialization", tag: "Property" },
+  { icon: Handshake, title: "Commercial Leasing & Tenants", tag: "Leasing" },
+  { icon: Megaphone, title: "Marketing & Brand Positioning", tag: "Marketing" },
+  { icon: Wrench, title: "Facility Management", tag: "FM" },
+  { icon: ClipboardCheck, title: "Project Management", tag: "PMO" },
+  { icon: Scale, title: "Corporate Advisory", tag: "Advisory" },
+  { icon: Landmark, title: "Government Liaison", tag: "Regulatory" },
+  { icon: Hotel, title: "Hospitality & Lifestyle Ops", tag: "Hospitality" },
 ];
 
 export function V2ServicesGrid() {
   return (
-    <section
-      className="py-24 lg:py-32"
-      style={{ background: "linear-gradient(180deg, #06080F 0%, #080B14 100%)" }}
-    >
+    <section className="py-24 lg:py-32" style={{ background: "#ffffff" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="h-px w-10" style={{ background: "#1549F0" }} />
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-1 rounded-full" style={{ background: BLUE }} />
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: BLUE }}>
                 Service Lines
               </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2
+              className="text-4xl lg:text-5xl font-bold leading-tight"
+              style={{ color: "#0D1B3E", fontFamily: "'Poppins', sans-serif" }}
+            >
               16 integrated{" "}
-              <span style={{ color: "#1549F0" }}>disciplines</span>
+              <span style={{ color: BLUE }}>disciplines</span>
               <br />
               under one firm
             </h2>
           </div>
           <div className="max-w-sm">
-            <p className="text-slate-400 text-base leading-relaxed mb-5">
-              No fragmented outsourcing. Every service line operates under a single, accountable
-              team with end-to-end visibility.
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#64748B" }}>
+              No fragmented outsourcing. Every service line operates under a single accountable team
+              with complete end-to-end visibility.
             </p>
             <Link
               to="/v2/services"
-              className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+              style={{ color: BLUE }}
             >
               View all services <ArrowRight size={15} />
             </Link>
           </div>
         </div>
 
-        {/* Services Grid */}
+        {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {services.map((s) => (
+          {services.map((s, i) => (
             <Link
               key={s.title}
               to="/v2/services"
-              className="group relative rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5"
+              className="group relative rounded-xl p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               style={{
-                background: "rgba(255,255,255,0.025)",
-                border: "1px solid rgba(255,255,255,0.07)",
+                background: "#F8FAFF",
+                border: "1.5px solid #E5EAFF",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${BLUE}40`;
+                e.currentTarget.style.background = "#EEF2FF";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "#E5EAFF";
+                e.currentTarget.style.background = "#F8FAFF";
               }}
             >
-              {/* Hover overlay */}
-              <div
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background: `linear-gradient(135deg, ${s.color}08, transparent)`,
-                  border: `1px solid ${s.color}25`,
-                }}
-              />
-
-              <div className="relative">
-                <div className="flex items-start justify-between mb-4">
-                  <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center"
-                    style={{ background: `${s.color}15` }}
-                  >
-                    <s.icon size={17} style={{ color: s.color }} />
-                  </div>
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                    style={{
-                      background: `${s.color}15`,
-                      color: s.color,
-                      border: `1px solid ${s.color}25`,
-                    }}
-                  >
-                    {s.tag}
-                  </span>
+              <div className="flex items-start justify-between mb-4">
+                <div
+                  className="w-9 h-9 rounded-lg flex items-center justify-center"
+                  style={{ background: `${BLUE}12` }}
+                >
+                  <s.icon size={17} style={{ color: BLUE }} />
                 </div>
-                <h3 className="text-sm font-semibold text-white leading-snug group-hover:text-blue-100 transition-colors">
-                  {s.title}
-                </h3>
+                <span
+                  className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                  style={{ background: `${BLUE}10`, color: BLUE, border: `1px solid ${BLUE}20` }}
+                >
+                  {s.tag}
+                </span>
               </div>
+              <h3
+                className="text-sm font-semibold leading-snug"
+                style={{ color: "#0D1B3E", fontFamily: "'Poppins', sans-serif" }}
+              >
+                {s.title}
+              </h3>
             </Link>
           ))}
         </div>

@@ -8,10 +8,7 @@ interface V2LayoutProps {
 
 export function V2Layout({ children }: V2LayoutProps) {
   return (
-    <div
-      className="min-h-screen"
-      style={{ background: "#06080F", color: "#F1F5F9" }}
-    >
+    <div style={{ fontFamily: "'Poppins', sans-serif", background: "#FFFFFF", color: "#0D1B3E" }}>
       <V2Header />
       <main>{children}</main>
       <V2Footer />

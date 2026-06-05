@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Mail, Phone, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
+import { MapPin, Mail, Phone, Linkedin, Twitter, ArrowUpRight, ArrowRight } from "lucide-react";
+
+const BLUE = "#1547D6";
+const BLUE_DARK = "#0F35B0";
 
 const footerServices = [
   "Commercial Project Development",
@@ -14,52 +17,58 @@ const footerServices = [
 
 export function V2Footer() {
   return (
-    <footer style={{ background: "#04060D", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+    <footer style={{ background: "#0A1A4A" }}>
       {/* CTA Band */}
       <div
         className="relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #0A1A4A 0%, #0D0F1E 60%)" }}
+        style={{ background: `linear-gradient(135deg, ${BLUE_DARK} 0%, ${BLUE} 100%)` }}
       >
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background:
-              "radial-gradient(ellipse 60% 80% at 20% 50%, rgba(21,73,240,0.15) 0%, transparent 70%)",
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)
+            `,
+            backgroundSize: "60px 60px",
           }}
         />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div>
               <div
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium text-blue-300 mb-4"
-                style={{ background: "rgba(21,73,240,0.15)", border: "1px solid rgba(21,73,240,0.25)" }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white/80 mb-5"
+                style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 Available for New Projects
               </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+              <h2
+                className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-3"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
                 Ready to develop your{" "}
-                <span style={{ color: "#C9A32A" }}>next commercial</span>
+                <span style={{ color: "#FFD76E" }}>next commercial</span>
                 <br />
                 destination?
               </h2>
-              <p className="text-slate-400 max-w-lg">
-                From feasibility to grand opening — ArieFirm delivers end-to-end commercial project
-                development across Pakistan.
+              <p className="text-white/70 max-w-lg">
+                From feasibility to grand opening — ArieFirm delivers end-to-end commercial
+                project development across Pakistan.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <Link
                 to="/v2/contact"
-                className="px-6 py-3.5 rounded-xl text-sm font-semibold text-white transition-all hover:brightness-110"
-                style={{ background: "linear-gradient(135deg, #1549F0, #0A32C8)" }}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white transition-all hover:brightness-110"
+                style={{ background: "rgba(255,255,255,0.15)", border: "2px solid rgba(255,255,255,0.3)" }}
               >
-                Start a Project
+                Start a Project <ArrowRight size={14} />
               </Link>
               <Link
                 to="/v2/services"
                 className="px-6 py-3.5 rounded-xl text-sm font-semibold text-white transition-all hover:bg-white/10"
-                style={{ border: "1px solid rgba(255,255,255,0.15)" }}
+                style={{ border: "1px solid rgba(255,255,255,0.2)" }}
               >
                 Explore Services
               </Link>
@@ -71,57 +80,52 @@ export function V2Footer() {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Column */}
+          {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/v2" className="flex items-center gap-3 mb-5">
               <div
                 className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                style={{ background: "linear-gradient(135deg, #1549F0, #0A32C8)" }}
+                style={{ background: BLUE }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 2C6.5 2 3 5.5 3 9c0 2.5 1.5 4.5 3.5 5.5L5 20h14l-1.5-5.5C19.5 13.5 21 11.5 21 9c0-3.5-3.5-7-9-7z"
-                    fill="white"
-                    fillOpacity="0.9"
-                  />
+                <svg width="18" height="18" viewBox="0 0 100 100" fill="none">
+                  <path d="M50 5 C32 5 16 16 10 30 C4 44 6 60 14 72 C10 70 6 65 5 58 C4 68 8 78 16 84 L14 95 L86 95 L84 84 C92 78 96 68 95 58 C94 65 90 70 86 72 C94 60 96 44 90 30 C84 16 68 5 50 5Z" fill="white"/>
+                  <circle cx="38" cy="46" r="4" fill={BLUE}/>
+                  <circle cx="62" cy="46" r="4" fill={BLUE}/>
+                  <path d="M34 65 Q42 78 50 80 Q58 78 66 65 Q58 72 50 73 Q42 72 34 65Z" fill={BLUE}/>
                 </svg>
               </div>
               <span
-                className="text-lg font-bold"
-                style={{
-                  background: "linear-gradient(90deg, #ffffff, #C9A32A)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                className="text-lg font-bold text-white"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 ArieFirm
               </span>
             </Link>
-            <p className="text-sm text-slate-500 leading-relaxed mb-6">
+            <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.5)" }}>
               Pakistan's premier diversified firm for commercial development, consulting, and
-              operations management. Registered and fully compliant.
+              operations management. Duly registered and fully compliant.
             </p>
             <div className="flex items-center gap-3">
-              <a
-                href="#"
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition-all"
-                style={{ border: "1px solid rgba(255,255,255,0.08)" }}
-              >
-                <Linkedin size={14} />
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition-all"
-                style={{ border: "1px solid rgba(255,255,255,0.08)" }}
-              >
-                <Twitter size={14} />
-              </a>
+              {[Linkedin, Twitter].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center transition-all hover:bg-white/20"
+                  style={{ border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.5)" }}
+                >
+                  <Icon size={14} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Company Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Company</h4>
+            <h4
+              className="text-xs font-semibold uppercase tracking-widest text-white mb-5"
+            >
+              Company
+            </h4>
             <ul className="space-y-3">
               {[
                 { label: "Home", to: "/v2" },
@@ -132,28 +136,29 @@ export function V2Footer() {
                 <li key={l.label}>
                   <Link
                     to={l.to}
-                    className="text-sm text-slate-500 hover:text-white transition-colors flex items-center gap-1 group"
+                    className="text-sm flex items-center gap-1 group transition-colors hover:text-white"
+                    style={{ color: "rgba(255,255,255,0.5)" }}
                   >
                     {l.label}
-                    <ArrowUpRight
-                      size={12}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    />
+                    <ArrowUpRight size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Services</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-5">
+              Services
+            </h4>
             <ul className="space-y-3">
               {footerServices.map((s) => (
                 <li key={s}>
                   <Link
                     to="/v2/services"
-                    className="text-sm text-slate-500 hover:text-white transition-colors"
+                    className="text-sm transition-colors hover:text-white"
+                    style={{ color: "rgba(255,255,255,0.5)" }}
                   >
                     {s}
                   </Link>
@@ -164,28 +169,25 @@ export function V2Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Contact</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-5">
+              Contact
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={15} className="text-blue-400 mt-0.5 shrink-0" />
-                <span className="text-sm text-slate-500 leading-relaxed">
-                  25-K, Gulberg II
-                  <br />
-                  Lahore, Pakistan
+                <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "#FFD76E" }} />
+                <span className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
+                  25-K, Gulberg II<br />Lahore, Pakistan
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={15} className="text-blue-400 shrink-0" />
-                <a href="tel:+92300000000" className="text-sm text-slate-500 hover:text-white transition-colors">
+                <Phone size={14} className="shrink-0" style={{ color: "#FFD76E" }} />
+                <a href="tel:+92300000000" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.5)" }}>
                   +92 300 000 0000
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={15} className="text-blue-400 shrink-0" />
-                <a
-                  href="mailto:info@ariefirm.com"
-                  className="text-sm text-slate-500 hover:text-white transition-colors"
-                >
+                <Mail size={14} className="shrink-0" style={{ color: "#FFD76E" }} />
+                <a href="mailto:info@ariefirm.com" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.5)" }}>
                   info@ariefirm.com
                 </a>
               </li>
@@ -193,23 +195,21 @@ export function V2Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom */}
         <div
           className="mt-14 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+          style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
         >
-          <p className="text-xs text-slate-600">
+          <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
             © {new Date().getFullYear()} ArieFirm. All rights reserved. Registered in Pakistan.
           </p>
-          <div className="flex items-center gap-1">
-            <span
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs"
-              style={{ background: "rgba(21,73,240,0.1)", color: "#6B9BFF" }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              Fully Compliant & Registered
-            </span>
-          </div>
+          <span
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs"
+            style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.4)" }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+            Fully Compliant & Registered
+          </span>
         </div>
       </div>
     </footer>

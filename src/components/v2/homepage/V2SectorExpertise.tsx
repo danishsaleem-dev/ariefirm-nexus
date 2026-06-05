@@ -1,109 +1,144 @@
-import { Store, UtensilsCrossed, Ticket, ShoppingBag, Hotel, Landmark } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+
+const BLUE = "#1547D6";
 
 const sectors = [
   {
-    icon: Store,
     title: "Shopping Malls",
-    text: "End-to-end development, tenant mix curation, operations and footfall strategy for retail destinations.",
     tag: "Retail Destinations",
+    text: "End-to-end mall development, tenant curation, operations and footfall strategy.",
+    image: "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=700&h=480&fit=crop&auto=format&q=80",
   },
   {
-    icon: UtensilsCrossed,
     title: "Food & Dining",
-    text: "Food court design, kitchen infrastructure, brand curation and daily operations that draw consistent crowds.",
     tag: "F&B Concepts",
+    text: "Food court design, kitchen infrastructure, brand curation and daily operations.",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&h=480&fit=crop&auto=format&q=80",
   },
   {
-    icon: Ticket,
     title: "Entertainment & Recreation",
-    text: "Venue development, event programming, recreation zones and experience design for lasting impressions.",
-    tag: "Entertainment Venues",
+    tag: "Experience Venues",
+    text: "Venue development, event programming and experience design for lasting impressions.",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=480&fit=crop&auto=format&q=80",
   },
   {
-    icon: ShoppingBag,
-    title: "Retail & Lifestyle",
-    text: "National and international lifestyle brand sourcing, placement and partnership structuring.",
+    title: "Retail & Lifestyle Brands",
     tag: "Brand Partnerships",
+    text: "National and international lifestyle brand sourcing, placement and structuring.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&h=480&fit=crop&auto=format&q=80",
   },
   {
-    icon: Hotel,
     title: "Hospitality & Lifestyle",
-    text: "Hospitality project development and operations delivering service quality that builds loyal audiences.",
     tag: "Hospitality Ops",
+    text: "Hospitality project development and operations for loyal, returning audiences.",
+    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&h=480&fit=crop&auto=format&q=80",
   },
   {
-    icon: Landmark,
     title: "Public-Sector Facilities",
-    text: "Government-regulated commercial facilities navigating approvals, zoning and authority relations.",
     tag: "Regulatory",
+    text: "Government-regulated commercial facilities navigating approvals and zoning.",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&h=480&fit=crop&auto=format&q=80",
   },
 ];
 
 export function V2SectorExpertise() {
   return (
-    <section className="py-24 lg:py-32" style={{ background: "#06080F" }}>
+    <section className="py-24 lg:py-32" style={{ background: "#F8FAFF" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center gap-3 mb-5">
-          <div className="h-px w-10" style={{ background: "#1549F0" }} />
-          <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
-            Sector Expertise
-          </span>
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-1 rounded-full" style={{ background: BLUE }} />
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: BLUE }}>
+                Sector Expertise
+              </span>
+            </div>
+            <h2
+              className="text-4xl lg:text-5xl font-bold leading-tight"
+              style={{ color: "#0D1B3E", fontFamily: "'Poppins', sans-serif" }}
+            >
+              Deep expertise across{" "}
+              <span style={{ color: BLUE }}>every</span>
+              <br />
+              commercial sector
+            </h2>
+          </div>
+          <div className="max-w-sm">
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#64748B" }}>
+              From a single-brand franchise to a multi-floor lifestyle destination — ArieFirm has
+              sector-specific knowledge to develop and operate it profitably.
+            </p>
+            <Link
+              to="/v2/services"
+              className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+              style={{ color: BLUE }}
+            >
+              View all services <ArrowRight size={15} />
+            </Link>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-end mb-14">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Deep expertise across{" "}
-            <span style={{ color: "#1549F0" }}>every</span>
-            <br />
-            commercial sector
-          </h2>
-          <p className="text-slate-400 text-base leading-relaxed">
-            From a single-brand franchise to a multi-floor lifestyle destination, ArieFirm has the
-            sector-specific knowledge to develop and operate it profitably.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {sectors.map((s, i) => (
+        {/* Image Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {sectors.map((s) => (
             <div
               key={s.title}
-              className="group rounded-2xl p-7 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
-              style={{
-                background:
-                  i % 2 === 0
-                    ? "rgba(255,255,255,0.025)"
-                    : "rgba(255,255,255,0.018)",
-                border: "1px solid rgba(255,255,255,0.07)",
-              }}
+              className="group relative rounded-2xl overflow-hidden cursor-pointer"
+              style={{ aspectRatio: "4/3" }}
             >
-              {/* Hover glow */}
+              {/* Background image */}
+              <img
+                src={s.image}
+                alt={s.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
+
+              {/* Gradient overlay — always visible at bottom */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                className="absolute inset-0 transition-opacity duration-300"
                 style={{
-                  background: "radial-gradient(ellipse at 30% 30%, rgba(21,73,240,0.08) 0%, transparent 70%)",
+                  background:
+                    "linear-gradient(to top, rgba(13,27,62,0.92) 0%, rgba(13,27,62,0.45) 50%, rgba(13,27,62,0.1) 100%)",
                 }}
               />
 
-              <div className="relative">
-                <div className="flex items-start justify-between mb-5">
-                  <div
-                    className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{
-                      background: "rgba(21,73,240,0.12)",
-                      border: "1px solid rgba(21,73,240,0.2)",
-                    }}
-                  >
-                    <s.icon size={20} style={{ color: "#4F7FFF" }} />
-                  </div>
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full text-slate-500"
-                    style={{ background: "rgba(255,255,255,0.05)" }}
-                  >
-                    {s.tag}
-                  </span>
+              {/* Blue overlay on hover */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: `linear-gradient(to top, ${BLUE}CC 0%, ${BLUE}55 60%, transparent 100%)` }}
+              />
+
+              {/* Tag */}
+              <div className="absolute top-4 left-4">
+                <span
+                  className="text-[10px] font-semibold px-2.5 py-1 rounded-full"
+                  style={{ background: "rgba(255,255,255,0.15)", color: "white", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.2)" }}
+                >
+                  {s.tag}
+                </span>
+              </div>
+
+              {/* Text content */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3
+                  className="text-lg font-bold text-white mb-2"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  {s.title}
+                </h3>
+                <p
+                  className="text-sm text-white/75 leading-relaxed max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-300"
+                >
+                  {s.text}
+                </p>
+                <div
+                  className="flex items-center gap-1.5 text-sm font-semibold text-white mt-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+                >
+                  Learn more <ArrowRight size={14} />
                 </div>
-                <h3 className="text-base font-bold text-white mb-2">{s.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{s.text}</p>
               </div>
             </div>
           ))}
