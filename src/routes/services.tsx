@@ -7,14 +7,14 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Ariefirm" },
+      { title: "Services — ArieFirm" },
       {
         name: "description",
         content:
-          "Explore Ariefirm services: legal consultancy, building developments, government projects, project handling, global village, settlements, disputes, investment & trading.",
+          "ArieFirm services: commercial project development, shopping mall & food court operations, retail & lifestyle brands, franchise, entertainment, investment, leasing, marketing, facility management and compliance.",
       },
-      { property: "og:title", content: "Services — Ariefirm" },
-      { property: "og:description", content: "Complete coverage across legal, development, investment and trade." },
+      { property: "og:title", content: "Services — ArieFirm" },
+      { property: "og:description", content: "Complete coverage across development, operations, lifestyle, investment and compliance." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -29,11 +29,11 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wide text-gold">Our services</p>
           <h1 className="mt-3 max-w-3xl font-serif text-4xl font-semibold sm:text-5xl">
-            Comprehensive expertise across every discipline
+            Comprehensive business solutions, end to end
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80">
-            Whatever the venture, Ariefirm delivers it end to end — combining legal,
-            development, investment and trade capabilities under one roof.
+            From developing and operating commercial destinations to retail, food,
+            entertainment, investment and compliance — ArieFirm delivers it all under one roof.
           </p>
         </div>
       </section>
