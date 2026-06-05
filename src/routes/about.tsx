@@ -22,15 +22,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  { value: "9", label: "Integrated practice areas" },
-  { value: "100%", label: "End-to-end delivery" },
-  { value: "24/7", label: "Advisory support" },
+  { value: "18+", label: "Integrated service lines" },
+  { value: "100%", label: "Compliant & registered" },
+  { value: "Nationwide", label: "Projects across Pakistan" },
 ];
 
 const values = [
-  { icon: Target, title: "Our Mission", text: "To deliver legal, development and investment outcomes with clarity, integrity and measurable results." },
-  { icon: Eye, title: "Our Vision", text: "To be the most trusted single partner for ambitious projects — from the first contract to the final handover." },
-  { icon: Award, title: "Our Promise", text: "Practical advice, rigorous execution, and a relentless focus on protecting your interests." },
+  { icon: Target, title: "Our Mission", text: "To plan, develop and operate world-class commercial destinations that create lasting value for landlords, brands and communities." },
+  { icon: Eye, title: "Our Vision", text: "To be Pakistan's most trusted partner for developing and managing commercial, retail, lifestyle and entertainment destinations." },
+  { icon: Award, title: "Our Promise", text: "Full-cycle delivery — design, build, finance and operate — backed by complete legal and regulatory compliance." },
 ];
 
 function AboutPage() {
