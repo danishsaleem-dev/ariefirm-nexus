@@ -109,7 +109,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} Ariefirm. All rights reserved.</p>
-          <p>Legal Consultancy · Developments · Investment · Trading</p>
+          <p>Development · Operations · Retail · Lifestyle · Entertainment</p>
         </div>
       </div>
     </footer>
