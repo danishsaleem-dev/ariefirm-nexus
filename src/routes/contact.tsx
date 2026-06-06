@@ -63,7 +63,9 @@ function ContactPage() {
               </span>
               <div>
                 <p className="font-semibold text-foreground">Email</p>
-                <p className="text-muted-foreground">info@ariefirm.com</p>
+                <a href="mailto:info@ariefirm.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  info@ariefirm.com
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -72,7 +74,9 @@ function ContactPage() {
               </span>
               <div>
                 <p className="font-semibold text-foreground">Phone</p>
-                <p className="text-muted-foreground">+1 (000) 000-0000</p>
+                <a href="tel:+923006885680" className="text-muted-foreground hover:text-primary transition-colors">
+                  +92 300-6885680
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -81,7 +85,7 @@ function ContactPage() {
               </span>
               <div>
                 <p className="font-semibold text-foreground">Office</p>
-                <p className="text-muted-foreground">One Global Plaza, Suite 1200</p>
+                <p className="text-muted-foreground">23 Hunza Block, Allama Iqbal Town, Lahore</p>
               </div>
             </div>
           </div>
