@@ -228,7 +228,7 @@ function V2AboutPage() {
                   Active Development
                 </div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                  Gulberg II Commercial Destination
+                  Allama Iqbal Town Commercial Destination
                 </h3>
                 <p className="text-slate-400 leading-relaxed mb-6">
                   ArieFirm is developing a landmark commercial destination in the heart of Lahore's
@@ -246,7 +246,7 @@ function V2AboutPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "Location", value: "25-K, Gulberg II, Lahore" },
+                  { label: "Location", value: "23 Hunza Block, Allama Iqbal Town, Lahore" },
                   { label: "Front", value: "~107 Feet" },
                   { label: "Depth", value: "~177 Feet" },
                   { label: "Status", value: "Commercially Approved" },

@@ -119,11 +119,11 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 shrink-0" style={{ color: "#C9A32A" }} />
-              <span>+92 300 000 0000</span>
+              <a href="tel:+923006885680" className="hover:text-white transition-colors">+92 300-6885680</a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#C9A32A" }} />
-              <span>25-K, Gulberg II, Lahore, Pakistan</span>
+              <span>23 Hunza Block, Allama Iqbal Town, Lahore</span>
             </li>
           </ul>
         </div>

@@ -176,13 +176,13 @@ export function V2Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "#FFD76E" }} />
                 <span className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  25-K, Gulberg II<br />Lahore, Pakistan
+                  23 Hunza Block, Allama Iqbal Town<br />Lahore, Pakistan
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="shrink-0" style={{ color: "#FFD76E" }} />
-                <a href="tel:+92300000000" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  +92 300 000 0000
+                <a href="tel:+923006885680" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.5)" }}>
+                  +92 300-6885680
                 </a>
               </li>
               <li className="flex items-center gap-3">

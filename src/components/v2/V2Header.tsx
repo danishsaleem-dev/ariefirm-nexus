@@ -78,9 +78,9 @@ export function V2Header() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-9 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="tel:+92300000000" className="flex items-center gap-1.5 hover:text-white transition-colors">
+            <a href="tel:+923006885680" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Phone size={12} />
-              +92 300 000 0000
+              +92 300-6885680
             </a>
             <a href="mailto:info@ariefirm.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Mail size={12} />
@@ -93,7 +93,7 @@ export function V2Header() {
               Mon – Fri, 9:00 AM – 6:00 PM PKT
             </span>
             <span className="flex items-center gap-1.5 opacity-70">
-              25-K Gulberg II, Lahore, Pakistan
+              23 Hunza Block, Allama Iqbal Town, Lahore
             </span>
           </div>
         </div>

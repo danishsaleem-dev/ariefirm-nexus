@@ -32,11 +32,11 @@ export function Header() {
         <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+92300000000"
+              href="tel:+923006885680"
               className="flex items-center gap-2 transition-colors hover:text-primary-foreground"
             >
               <Phone className="h-3.5 w-3.5 text-gold" />
-              +92 300 000 0000
+              +92 300-6885680
             </a>
             <a
               href="mailto:info@ariefirm.com"
@@ -52,7 +52,7 @@ export function Header() {
               Mon–Fri · 9:00 AM – 6:00 PM PKT
             </span>
             <span className="text-[10px] font-semibold uppercase tracking-wide text-gold">
-              25-K Gulberg II, Lahore
+              23 Hunza Block, Allama Iqbal Town, Lahore
             </span>
           </div>
         </div>
@@ -247,12 +247,12 @@ export function Header() {
                     Book Consultation <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                   <a
-                    href="tel:+92300000000"
+                    href="tel:+923006885680"
                     className="flex w-full items-center justify-center gap-2 rounded-xl py-2.5 text-xs transition-all hover:bg-white/10 hover:text-white"
                     style={{ color: "rgba(255,255,255,0.5)" }}
                   >
                     <Phone className="h-3 w-3" />
-                    +92 300 000 0000
+                    +92 300-6885680
                   </a>
                 </div>
               </div>

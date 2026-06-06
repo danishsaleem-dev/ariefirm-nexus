@@ -55,13 +55,13 @@ const contactItems = [
   {
     icon: MapPin,
     label: "Office",
-    value: "25-K, Gulberg II, Lahore, Pakistan",
+    value: "23 Hunza Block, Allama Iqbal Town, Lahore",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+92 300 000 0000",
-    href: "tel:+92300000000",
+    value: "+92 300-6885680",
+    href: "tel:+923006885680",
   },
   {
     icon: Mail,
@@ -253,7 +253,7 @@ function V2ContactPage() {
                     <input
                       {...register("phone")}
                       type="tel"
-                      placeholder="+92 300 000 0000"
+                      placeholder="+92 300-6885680"
                       className={inputClass}
                       style={inputStyle}
                     />

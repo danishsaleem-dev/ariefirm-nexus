@@ -55,7 +55,7 @@ export function V2HomeCTA() {
             <ArrowRight size={16} />
           </Link>
           <a
-            href="tel:+92300000000"
+            href="tel:+923006885680"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-base font-semibold transition-all hover:bg-white"
             style={{ color: BLUE, border: `2px solid ${BLUE}25`, background: "white" }}
           >

@@ -63,7 +63,7 @@ function ContactPage() {
               </span>
               <div>
                 <p className="font-semibold text-foreground">Email</p>
-                <p className="text-muted-foreground">hello@ariefirm.com</p>
+                <p className="text-muted-foreground">info@ariefirm.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
