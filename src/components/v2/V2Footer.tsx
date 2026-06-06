@@ -83,17 +83,13 @@ export function V2Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/v2" className="flex items-center gap-3 mb-5">
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                style={{ background: BLUE }}
-              >
-                <svg width="18" height="18" viewBox="0 0 100 100" fill="none">
-                  <path d="M50 5 C32 5 16 16 10 30 C4 44 6 60 14 72 C10 70 6 65 5 58 C4 68 8 78 16 84 L14 95 L86 95 L84 84 C92 78 96 68 95 58 C94 65 90 70 86 72 C94 60 96 44 90 30 C84 16 68 5 50 5Z" fill="white"/>
-                  <circle cx="38" cy="46" r="4" fill={BLUE}/>
-                  <circle cx="62" cy="46" r="4" fill={BLUE}/>
-                  <path d="M34 65 Q42 78 50 80 Q58 78 66 65 Q58 72 50 73 Q42 72 34 65Z" fill={BLUE}/>
-                </svg>
-              </div>
+              <img
+                src="/ariefirm-logo.png"
+                alt="ArieFirm logo"
+                width={36}
+                height={36}
+                className="h-9 w-auto object-contain"
+              />
               <span
                 className="text-lg font-bold text-white"
                 style={{ fontFamily: "'Poppins', sans-serif" }}

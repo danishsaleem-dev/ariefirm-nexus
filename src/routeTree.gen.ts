@@ -14,6 +14,10 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as V2IndexRouteImport } from './routes/v2/index'
+import { Route as V2ServicesRouteImport } from './routes/v2/services'
+import { Route as V2ContactRouteImport } from './routes/v2/contact'
+import { Route as V2AboutRouteImport } from './routes/v2/about'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -40,6 +44,26 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const V2IndexRoute = V2IndexRouteImport.update({
+  id: '/v2/',
+  path: '/v2/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const V2ServicesRoute = V2ServicesRouteImport.update({
+  id: '/v2/services',
+  path: '/v2/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const V2ContactRoute = V2ContactRouteImport.update({
+  id: '/v2/contact',
+  path: '/v2/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const V2AboutRoute = V2AboutRouteImport.update({
+  id: '/v2/about',
+  path: '/v2/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +71,10 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/v2/about': typeof V2AboutRoute
+  '/v2/contact': typeof V2ContactRoute
+  '/v2/services': typeof V2ServicesRoute
+  '/v2/': typeof V2IndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +82,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/v2/about': typeof V2AboutRoute
+  '/v2/contact': typeof V2ContactRoute
+  '/v2/services': typeof V2ServicesRoute
+  '/v2': typeof V2IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +94,45 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/v2/about': typeof V2AboutRoute
+  '/v2/contact': typeof V2ContactRoute
+  '/v2/services': typeof V2ServicesRoute
+  '/v2/': typeof V2IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/services' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/sitemap.xml'
+    | '/v2/about'
+    | '/v2/contact'
+    | '/v2/services'
+    | '/v2/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/services' | '/sitemap.xml'
-  id: '__root__' | '/' | '/about' | '/contact' | '/services' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/sitemap.xml'
+    | '/v2/about'
+    | '/v2/contact'
+    | '/v2/services'
+    | '/v2'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/sitemap.xml'
+    | '/v2/about'
+    | '/v2/contact'
+    | '/v2/services'
+    | '/v2/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +141,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  V2AboutRoute: typeof V2AboutRoute
+  V2ContactRoute: typeof V2ContactRoute
+  V2ServicesRoute: typeof V2ServicesRoute
+  V2IndexRoute: typeof V2IndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +184,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/v2/': {
+      id: '/v2/'
+      path: '/v2'
+      fullPath: '/v2/'
+      preLoaderRoute: typeof V2IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/v2/services': {
+      id: '/v2/services'
+      path: '/v2/services'
+      fullPath: '/v2/services'
+      preLoaderRoute: typeof V2ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/v2/contact': {
+      id: '/v2/contact'
+      path: '/v2/contact'
+      fullPath: '/v2/contact'
+      preLoaderRoute: typeof V2ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/v2/about': {
+      id: '/v2/about'
+      path: '/v2/about'
+      fullPath: '/v2/about'
+      preLoaderRoute: typeof V2AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,7 +221,21 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  V2AboutRoute: V2AboutRoute,
+  V2ContactRoute: V2ContactRoute,
+  V2ServicesRoute: V2ServicesRoute,
+  V2IndexRoute: V2IndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

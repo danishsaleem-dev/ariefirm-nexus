@@ -30,34 +30,6 @@ const megaServices = [
   { icon: Hotel, title: "Hospitality" },
 ];
 
-function LionLogo({ size = 40 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Mane */}
-      <path d="M50 5 C32 5 16 16 10 30 C4 44 6 60 14 72 C10 70 6 65 5 58 C4 68 8 78 16 84 L14 95 L86 95 L84 84 C92 78 96 68 95 58 C94 65 90 70 86 72 C94 60 96 44 90 30 C84 16 68 5 50 5Z" fill={BLUE}/>
-      {/* Face highlight */}
-      <ellipse cx="50" cy="52" rx="22" ry="26" fill="white" opacity="0.18"/>
-      {/* Mane flame lines */}
-      <path d="M14 72 C10 64 8 54 10 44" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.4"/>
-      <path d="M86 72 C90 64 92 54 90 44" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.4"/>
-      <path d="M18 82 C12 76 9 68 11 60" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
-      <path d="M82 82 C88 76 91 68 89 60" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
-      {/* Eyes */}
-      <circle cx="38" cy="46" r="4" fill={BLUE}/>
-      <circle cx="62" cy="46" r="4" fill={BLUE}/>
-      <circle cx="39" cy="45" r="1.5" fill="white"/>
-      <circle cx="63" cy="45" r="1.5" fill="white"/>
-      {/* Nose */}
-      <path d="M45 58 Q50 62 55 58 Q50 55 45 58Z" fill={BLUE}/>
-      {/* Open mouth / roar */}
-      <path d="M34 65 Q42 78 50 80 Q58 78 66 65 Q58 72 50 73 Q42 72 34 65Z" fill={BLUE}/>
-      {/* Fangs */}
-      <path d="M44 65 L42 73 L46 73 Z" fill="white"/>
-      <path d="M56 65 L54 73 L58 73 Z" fill="white"/>
-    </svg>
-  );
-}
-
 export function V2Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -112,7 +84,13 @@ export function V2Header() {
           <div className="flex items-center justify-between h-18 py-3">
             {/* Logo */}
             <Link to="/v2" className="flex items-center gap-3">
-              <LionLogo size={44} />
+              <img
+                src="/ariefirm-logo.png"
+                alt="ArieFirm logo"
+                width={44}
+                height={44}
+                className="h-11 w-auto object-contain"
+              />
               <div className="flex flex-col leading-tight">
                 <span
                   className="text-xl font-bold tracking-tight"
