@@ -69,32 +69,11 @@ export function Header() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <span
-              className="flex h-11 w-11 items-center justify-center rounded-lg shadow-soft"
-              style={{ background: "linear-gradient(135deg, #0046AA, #002E6B)" }}
-            >
-              <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-                <path
-                  d="M50 5 C32 5 16 16 10 30 C4 44 6 60 14 72 L14 95 L86 95 L86 72 C94 60 96 44 90 30 C84 16 68 5 50 5Z"
-                  fill="white"
-                  fillOpacity="0.95"
-                />
-                <circle cx="38" cy="46" r="5" fill="#0046AA" />
-                <circle cx="62" cy="46" r="5" fill="#0046AA" />
-                <path
-                  d="M34 65 Q42 78 50 80 Q58 78 66 65 Q58 72 50 73 Q42 72 34 65Z"
-                  fill="#0046AA"
-                />
-              </svg>
-            </span>
-            <span className="flex flex-col leading-none">
-              <span className="text-2xl font-bold tracking-tight text-foreground">
-                Arie<span className="text-gold">Firm</span>
-              </span>
-              <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                Develop · Operate · Manage
-              </span>
-            </span>
+            <img
+              src="/logo.png"
+              alt="ArieFirm"
+              className="h-11 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}

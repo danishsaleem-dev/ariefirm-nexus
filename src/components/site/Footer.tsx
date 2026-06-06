@@ -32,20 +32,11 @@ export function Footer() {
         {/* Brand */}
         <div className="lg:col-span-4">
           <Link to="/" className="flex items-center gap-3 mb-5">
-            <span
-              className="flex h-10 w-10 items-center justify-center rounded-lg"
-              style={{ background: "linear-gradient(135deg, #0046AA, #002E6B)" }}
-            >
-              <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
-                <path d="M50 5 C32 5 16 16 10 30 C4 44 6 60 14 72 L14 95 L86 95 L86 72 C94 60 96 44 90 30 C84 16 68 5 50 5Z" fill="white" fillOpacity="0.95"/>
-                <circle cx="38" cy="46" r="5" fill="#0046AA"/>
-                <circle cx="62" cy="46" r="5" fill="#0046AA"/>
-                <path d="M34 65 Q42 78 50 80 Q58 78 66 65 Q58 72 50 73 Q42 72 34 65Z" fill="#0046AA"/>
-              </svg>
-            </span>
-            <span className="text-xl font-bold text-white">
-              Arie<span style={{ color: "#C9A32A" }}>Firm</span>
-            </span>
+            <img
+              src="/logo.png"
+              alt="ArieFirm"
+              className="h-10 w-auto object-contain brightness-0 invert"
+            />
           </Link>
           <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
             A diversified business development, consulting and operations firm —
