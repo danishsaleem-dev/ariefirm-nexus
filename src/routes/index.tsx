@@ -7,6 +7,7 @@ import { PopularTopics } from "@/components/site/PopularTopics";
 import { WhyChoose } from "@/components/site/WhyChoose";
 import { Testimonials } from "@/components/site/Testimonials";
 import { CTASection } from "@/components/site/CTASection";
+import { StatsCounter } from "@/components/site/StatsCounter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,6 +35,7 @@ function Index() {
   return (
     <SiteLayout>
       <Hero />
+      <StatsCounter />
       <ServicesSection limit={6} />
       <Sectors />
       <PopularTopics />
