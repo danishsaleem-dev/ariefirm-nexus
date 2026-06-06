@@ -85,7 +85,7 @@ export function V2Header() {
             {/* Logo */}
             <Link to="/v2" className="flex items-center gap-3">
               <img
-                src="/ariefirm-logo.png"
+                src="/favicon.png"
                 alt="ArieFirm logo"
                 width={44}
                 height={44}

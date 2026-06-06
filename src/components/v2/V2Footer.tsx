@@ -84,7 +84,7 @@ export function V2Footer() {
           <div className="lg:col-span-1">
             <Link to="/v2" className="flex items-center gap-3 mb-5">
               <img
-                src="/ariefirm-logo.png"
+                src="/favicon.png"
                 alt="ArieFirm logo"
                 width={36}
                 height={36}

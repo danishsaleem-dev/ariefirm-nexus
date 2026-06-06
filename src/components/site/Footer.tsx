@@ -33,7 +33,7 @@ export function Footer() {
         <div className="lg:col-span-4">
           <Link to="/" className="flex items-center gap-3 mb-5">
             <img
-              src="/ariefirm-logo.png"
+              src="/favicon.png"
               alt="ArieFirm logo"
               width={40}
               height={40}
